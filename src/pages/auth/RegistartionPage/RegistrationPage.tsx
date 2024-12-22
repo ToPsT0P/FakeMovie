@@ -3,13 +3,15 @@ import FormTemplate from "../FormTemplate.tsx";
 import backButton from "../../../shared/ico/backButton.svg"
 import {useState} from "react";
 import {avatars} from "../../../shared/avatar/avatarLogic.tsx";
+import {Link} from "react-router-dom";
 
 
 const RegistrationPage = () => {
 
     const [isSuccessfulRegister, setIsSuccessfulRegister] = useState<boolean>(false);
     const [userAvatarId, setUserAvatarId] = useState<number>(0)
-    const registrationUser = () => {
+
+    const saveDataUser = () => {
 
     //TODO Сделать логику проверки данных
         setIsSuccessfulRegister(true)
@@ -18,11 +20,12 @@ const RegistrationPage = () => {
 
     return (
         <div className={styles.wrapper}>
-            <img src={backButton} alt="Назад" className={styles.wrapper__backButton}/>
-
+            <Link to={"/FakeMovie"}>
+                <img src={backButton} alt="Назад" className={styles.wrapper__backButton}/>
+            </Link>
             {!isSuccessfulRegister
             ?
-                <FormTemplate authOrLog={"Auth"} submitFunction={registrationUser}/>
+                <FormTemplate authOrLog={"Auth"} handlerFunction={saveDataUser}/>
             :
                 <div className={styles.wrapper__successfulRegister}>
                     <div className={styles.wrapper__successfulRegister__userInfo}>
@@ -36,7 +39,6 @@ const RegistrationPage = () => {
                         })}
                     </div>
                     <button className={styles.wrapper__successfulRegister__button}>Сохранить</button>
-
                 </div>
             }
         </div>

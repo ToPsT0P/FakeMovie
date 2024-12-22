@@ -1,0 +1,36 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  min-width: 1440px;
+  max-width: 3000px;
+  color: #EBFAFF;
+  background: linear-gradient(
+                  240deg,
+                  #030A1B 34%,
+                  #9747FF 500%
+  );
+  display: flex;
+
+
+  .wrapper__firstWindow{
+    width: 100%;
+    min-width: 1440px;
+    display: flex;
+    justify-content: center;
+
+    .wrapper__firstWindow__image{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-width: 1440px;
+      z-index: 0;
+    }
+
+    .wrapper__firstWindow__aboutMovie{
+      z-index: 1;
+
+      align-self: end;
+    }
+  }
+}

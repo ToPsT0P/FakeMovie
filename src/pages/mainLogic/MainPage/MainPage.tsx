@@ -1,9 +1,25 @@
-import {Link} from "react-router-dom";
+import styles from "./MainPage.module.scss"
+import firstWalpaper from "../../../shared/bigIMG/hero banner.png"
+import Navbar from "../../../widgets/navbar/Navbar.tsx";
 
 const MainPage = () => {
 
     return (
-        <Link to={"/FakeMovie/Login"}>asdasd</Link>
+        <div className={styles.wrapper}>
+        {/*  TODO Первое поле:  */}
+            <div className={styles.wrapper__firstWindow}>
+                <Navbar/>
+                <img src={firstWalpaper} className={styles.wrapper__firstWindow__image} alt="Ведьмак"/>
+                <div className={styles.wrapper__firstWindow__aboutMovie}>
+                    <p>Ведьмак</p>
+                    <p>
+                        Геральт из Ривии, мутировавший охотник на монстров по найму,
+                        отправляется навстречу своей судьбе в неспокойном мире, где люди
+                        зачастую оказываются более злыми, чем звери.
+                    </p>
+                </div>
+            </div>
+        </div>
     );
 };
 

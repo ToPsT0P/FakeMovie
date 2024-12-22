@@ -3,6 +3,7 @@ import FormTemplate from "../FormTemplate.tsx";
 import backButton from "../../../shared/ico/backButton.svg";
 import {useState} from "react";
 import avatar from "../../../shared/avatar/avatar1.svg"
+import {Link} from "react-router-dom";
 
 const LoginPage = () => {
 
@@ -10,17 +11,19 @@ const LoginPage = () => {
 
     const loginUser = () => {
 
-        // TODO Сделать логику проверки
+        // TODO Сделать логику проверки а после данные засовываем в RTK
         setIsSuccessfulLogin(true)
     }
 
     return (
         <div className={styles.wrapper}>
-            <img src={backButton} alt="Назад" className={styles.wrapper__backButton}/>
+            <Link to={"/FakeMovie"}>
+                <img src={backButton} alt="Назад" className={styles.wrapper__backButton}/>
+            </Link>
 
             {!isSuccessfulLogin
                 ?
-                <FormTemplate authOrLog={"Log"} submitFunction={loginUser}/>
+                <FormTemplate authOrLog={"Log"} handlerFunction={loginUser}/>
                 :
                 <>
                     <div className={styles.wrapper__successfulLogin}>

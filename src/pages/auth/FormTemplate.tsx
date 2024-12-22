@@ -5,14 +5,14 @@ import styles from "./FormTemplate.module.scss"
 
 interface IFormTemplate {
     authOrLog: "Auth" | "Log",
-    submitFunction: any,
+    handlerFunction: any,
 }
 
 // TODO Подправить интерфейс
 
-const FormTemplate:FC<IFormTemplate> = ({authOrLog, submitFunction}) => {
+const FormTemplate:FC<IFormTemplate> = ({authOrLog, handlerFunction}) => {
     return (
-        <form onSubmit={submitFunction} className={styles.wrapper__content}>
+        <form onSubmit={handlerFunction} className={styles.wrapper__content}>
             <div className={styles.wrapper__content__userData}>
                 <div className={styles.wrapper__content__userData__greetingText}>
                     <h1 className="text-white text-7xl">Welcome</h1>
