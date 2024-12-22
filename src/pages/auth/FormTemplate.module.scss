@@ -1,0 +1,135 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  max-width: 3000px;
+  background: linear-gradient(
+                  240deg,
+                  #030A1B 34%,
+                  #9747FF 500%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .wrapper__backButton{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+  }
+
+}
+
+.wrapper__content {
+  width: 80%;
+  max-width: 1440px;
+  max-height: 1024px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrapper__content__userData{
+  width: 410px;
+  height: fit-content;
+  align-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  .wrapper__content__userData__greetingText{
+    height: fit-content;
+  }
+
+  .wrapper__content__userData__selectOptions{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 90px;
+    color: #EBFAFF;
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.10em;
+      display: inline-block;
+      padding: 10px 10px;
+      position: relative;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #228EE5;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+
+    a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+
+  }
+
+  .wrapper__content__userData__inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+
+    input{
+      width: 100%;
+      height: 52px;
+      padding-left: 16px;
+      color: #aaaaaa;
+      background: transparent;
+      border-radius: 12px;
+      border:  1px solid #8d9ca1;
+      outline: none;
+      transition-duration: 0.2s;
+    }
+
+    input:focus{
+      border: 1px solid #cdcdcd;
+    }
+  }
+
+  .wrapper__content__userData__button{
+
+    button{
+      background: #228EE5;
+      width: 160px;
+      height: 50px;
+      color: #EBFAFF;
+      border-radius: 12px;
+      transition-duration: 0.3s;
+    }
+
+    button:hover{
+      background: rgba(25, 108, 174, 0.9);
+    }
+  }
+
+}
+
+.wrapper__content__image{
+
+  width: 100%;
+  height: 100%;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
