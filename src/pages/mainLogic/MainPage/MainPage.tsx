@@ -11,7 +11,7 @@ const MainPage = () => {
                 <Navbar/>
                 <img src={firstWalpaper} className={styles.wrapper__firstWindow__image} alt="Ведьмак"/>
                 <div className={styles.wrapper__firstWindow__aboutMovie}>
-                    <p>Ведьмак</p>
+                    <p className={styles.wrapper__firstWindow__aboutMovie__movieName}>Ведьмак</p>
                     <p>
                         Геральт из Ривии, мутировавший охотник на монстров по найму,
                         отправляется навстречу своей судьбе в неспокойном мире, где люди
