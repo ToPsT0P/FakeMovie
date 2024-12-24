@@ -1,13 +1,15 @@
-import unique1 from "./unique-1.svg"
-import unique2 from "./unique-2.svg"
-import unique3 from "./unique-3.svg"
-import unique4 from "./unique-4.svg"
-import unique5 from "./unique-5.svg"
-import unique6 from "./unique-6.svg"
-import unique7 from "./unique-7.svg"
-
+import image1 from "./image1.svg"
+import image2 from "./image2.svg"
+import image3 from "./image3.svg"
+import image6 from "./image6.svg"
+import image7 from "./image7.svg"
+import image8 from "./image8.svg"
 
 
 export const LogicIdiotArray = [
-    unique1, unique2, unique3, unique4, unique5, unique6, unique7
+    image1, image2, image3, image6, image7, image8, image1, image2, image3, image6, image7, image8
+]
+
+export const LogicIdiotArray1 = [
+     image7, image8, image1, image2, image3, image1, image2, image3, image6, image6, image7, image8
 ]
