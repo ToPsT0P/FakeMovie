@@ -1,47 +1,165 @@
+@media screen and (min-width: 1160px) {
+  .wrapper__firstWindow__bottomSide__aboutMovie__movieName{
+    font-size: 70px;
+  }
+  .wrapper__firstWindow__bottomSide__aboutMovie__description{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .wrapper__firstWindow__bottomSide__aboutMovie__movieName{
+    font-size: 62px;
+  }
+  .wrapper__firstWindow__bottomSide__aboutMovie__description{
+    font-size: 16px;
+  }
+}
+
 .wrapper {
   width: 100vw;
-  height: 100vh;
   min-width: 1000px;
-  max-width: 3000px;
+  max-width: 2000px;
   color: #EBFAFF;
-  background: linear-gradient(240deg, #030A1B 34%, #9747FF 500%);
+  background: linear-gradient(240deg, #030A1B 34%, #030A1B 500%);
   display: flex;
   overflow-y: hidden;
+  flex-wrap: wrap;
 
+
+  //Первое окно (После разбить)
   .wrapper__firstWindow {
     width: 100%;
     min-width: 1000px;
     max-width: inherit;
-    height: calc(100vw / 2.14);
+    height: fit-content;
     min-height: 470px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: relative;
 
+    .wrapper__firstWindow__bottomSide {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: end;
+      padding-left: 65px;
+      padding-right: 65px;
+      position: relative;
+      top: -150px;
+
+      .wrapper__firstWindow__bottomSide__filmsPosters {
+        z-index: 1;
+        width: clamp(450px, 60%, 700px);
+        height: fit-content;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+      }
+
+      .wrapper__firstWindow__bottomSide__aboutMovie {
+        z-index: 1;
+        width: clamp(400px, 40%, 620px);
+        height: fit-content;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+
+
+        .wrapper__firstWindow__bottomSide__aboutMovie__movieName {
+
+          display: flex;
+          font-weight: bold;
+          justify-content: start;
+
+        }
+
+        .wrapper__firstWindow__bottomSide__aboutMovie__description {
+          display: flex;
+          justify-content: start;
+          text-align: start;
+          padding-left: 5px;
+          color: #8d9ca1;
+        }
+      }
+    }
+
     .wrapper__firstWindow__image {
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
+      height: calc(100vw / 2);
+      max-height: 1000px;
       min-width: 1000px;
+      min-height: 500px;
+      max-width: 2000px;
       z-index: 0;
       overflow: hidden;
     }
 
-    .wrapper__firstWindow__aboutMovie {
-      z-index: 1;
-      width: clamp(500px, 60%, 720px);
-      height: clamp(100px, 35%, 180px);
-      position: absolute;
-      bottom: 3%;
-      left: 31%;
-      transform: translate(-50%, 0);
 
-
-      .wrapper__firstWindow__aboutMovie__movieName{
-        font-size: 60px;
-        font-weight: bold;
-      }
-    }
   }
+
+  .wrapper__goldenGlobe{
+    width: 100%;
+
+    .wrapper__goldenGlobe__image{
+      width: 100%;
+    }
+
+    button{
+      border: 1px solid #8d9ca1;
+      color: #EBFAFF;
+      border-radius: 50px;
+      height: 90px;
+      background: rgba(0, 0, 0, 0.41);
+      width: calc(100% / 1.5);
+      position: relative;
+      bottom: 150px;
+
+      font-size: 26px;
+      padding: 30px;
+      font-weight: bold;
+
+      text-decoration: none;
+      display: inline-block;
+      margin: 15px 0;
+      overflow: hidden;
+      text-transform:  uppercase;
+      transition: .2s ease-in-out;
+
+
+    }
+
+    button:before {
+      content: "";
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      height: 100%;
+      width: 65px;
+      position: absolute;
+      top: 0;
+      left: -120px;
+      transform: skewX(-45deg);
+    }
+    button:hover {
+      color: #fff !important;
+    }
+    button:hover:before {
+      left: 105%;
+      transition: .9s ease-in-out;
+    }
+    button:focus {
+      color: #fff !important;
+      outline: none;
+    }
+
+
+
+
+  }
+
+
 }

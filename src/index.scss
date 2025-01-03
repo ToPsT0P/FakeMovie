@@ -11,5 +11,13 @@
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+
 }
 
+#root {
+  text-align: center;
+  display: flex;
+  background: linear-gradient(240deg, #030A1B 34%, #030A1B 500%);
+  justify-content: center;
+  min-width: 1000px;
+}
